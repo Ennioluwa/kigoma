@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.header {
+    background-image: url('/pic4.jpg');
+    min-height: 40rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+img {
+    object-fit: cover;
+}
+
+.transition-nav {
+    transition: height 300ms ease;
+}
