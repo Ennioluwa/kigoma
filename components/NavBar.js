@@ -1,35 +1,3 @@
-// import React, { useState } from 'react'
-
-// const NavBar = () => {
-//   const [isMobile, setIsMobile] = useState(false)
-//   return (
-//     <nav className=" transition-nav minh absolute top-0 left-0 w-full flex-grow overflow-hidden bg-gray-100 text-xl font-semibold opacity-80 shadow-md transition-all sm:flex sm:h-20">
-//       <ul className=" container mx-auto flex w-full items-center p-3 lg:gap-16">
-//         <li className=" py-3 shadow">Logo</li>
-//         <div className=" hidden sm:contents ">
-//           <li className=" ml-auto cursor-pointer p-1 sm:p-4 ">ROOMS</li>
-//           <li className="cursor-pointer p-1 sm:p-4">FACILITIES</li>
-//           <li className="cursor-pointer p-1 sm:p-4">GALLERY</li>
-//           <li className="cursor-pointer p-1 sm:p-4">ABOUT US</li>
-//         </div>
-//         <li
-//           className=" ml-auto sm:hidden"
-//           onClick={() => setIsMobile(!isMobile)}
-//         >
-//           dot
-//         </li>
-//       </ul>
-//       <ul className=" z-100 block h-full bg-gray-400 text-center text-black transition-all sm:-z-10 sm:hidden sm:h-0  ">
-//         <li className=" ml-auto w-full cursor-pointer p-4 ">ROOMS</li>
-//         <li className="w-full cursor-pointer p-4">FACILITIES</li>
-//         <li className="w-full cursor-pointer p-4">GALLERY</li>
-//         <li className="w-full cursor-pointer p-4">ABOUT US</li>
-//       </ul>
-//     </nav>
-//   )
-// }
-
-// export default NavBar
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import { Transition } from '@headlessui/react'
@@ -44,7 +12,7 @@ const Nav = () => {
           <div className="flex h-20 w-full items-center">
             <div className="mx-10 flex w-full items-center justify-between ">
               <div className=" flex flex-shrink-0 items-center justify-center">
-                <h1 className=" cursor-pointer text-lg font-bold">
+                <h1 className=" cursor-pointer text-2xl font-bold">
                   Ki<span className=" text-blue-500">goma</span>
                 </h1>
               </div>
@@ -54,7 +22,7 @@ const Nav = () => {
                   to="rooms"
                   smooth={true}
                   spy={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className=" cursor-pointer px-3 py-2 font-semibold text-blue-600 hover:font-black"
                 >
@@ -64,7 +32,7 @@ const Nav = () => {
                   activeClass="active"
                   to="facilities"
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className=" cursor-pointer px-3 py-2 font-semibold text-blue-600 hover:font-black"
                 >
@@ -74,7 +42,7 @@ const Nav = () => {
                   activeClass="active"
                   to="gallery"
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className=" cursor-pointer px-3 py-2 font-semibold text-blue-600 hover:font-black"
                 >
@@ -84,7 +52,7 @@ const Nav = () => {
                   activeClass="active"
                   to="message"
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className=" cursor-pointer px-3 py-2 font-semibold text-blue-600 hover:font-black"
                 >
@@ -94,7 +62,7 @@ const Nav = () => {
                   activeClass="active"
                   to="contact"
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className=" cursor-pointer px-3 py-2 font-semibold text-blue-600 hover:font-black"
                 >
@@ -131,7 +99,7 @@ const Nav = () => {
                   activeClass="active"
                   to="rooms"
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   onClick={() => setIsOpen(false)}
                   duration={500}
                   className="block cursor-pointer rounded-md py-2 px-3 text-base font-medium text-black hover:bg-blue-600 hover:text-white"
@@ -144,7 +112,7 @@ const Nav = () => {
                   to="facilities"
                   onClick={() => setIsOpen(false)}
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className="block cursor-pointer rounded-md py-2 px-3 text-base font-medium text-black hover:bg-blue-600 hover:text-white"
                 >
@@ -156,7 +124,7 @@ const Nav = () => {
                   to="gallery"
                   onClick={() => setIsOpen(false)}
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className="block cursor-pointer rounded-md py-2 px-3 text-base font-medium text-black hover:bg-blue-600 hover:text-white"
                 >
@@ -168,7 +136,7 @@ const Nav = () => {
                   to="message"
                   onClick={() => setIsOpen(false)}
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className="block cursor-pointer rounded-md py-2 px-3 text-base font-medium text-black hover:bg-blue-600 hover:text-white"
                 >
@@ -180,7 +148,7 @@ const Nav = () => {
                   onClick={() => setIsOpen(false)}
                   to="contact"
                   smooth={true}
-                  offset={50}
+                  offset={-90}
                   duration={500}
                   className="block cursor-pointer rounded-md py-2 px-3 text-base font-medium text-black hover:bg-blue-600 hover:text-white"
                 >
