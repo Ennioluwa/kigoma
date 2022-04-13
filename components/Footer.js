@@ -22,9 +22,9 @@ const Footer = () => {
           <li>Awards</li>
         </ul>
         <ul className="flex flex-col gap-4">
-          <li>About</li>
-          <li>Accessibility</li>
-          <li>Awards</li>
+          <li>Contact</li>
+          <li>Features</li>
+          <li>Management</li>
         </ul>
         <ul className="flex flex-col justify-start gap-5 sm:flex-row">
           <li>

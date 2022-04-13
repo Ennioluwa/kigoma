@@ -2,7 +2,10 @@ import React from 'react'
 
 const Message = () => {
   return (
-    <div className=" container mx-auto mt-20 grid grid-cols-1 gap-20 p-5 sm:p-10 md:grid-cols-2">
+    <div
+      className=" container mx-auto mt-20 grid grid-cols-1 gap-20 p-5 sm:p-10 md:grid-cols-2 lg:p-20"
+      id="message"
+    >
       <div className=" col-span-1 mx-auto flex max-w-xl flex-col items-start justify-center gap-8">
         <h3 className=" mb-5 text-4xl font-semibold text-black">
           A message from the manager

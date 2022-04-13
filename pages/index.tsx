@@ -14,8 +14,8 @@ import {
 const Home: NextPage = () => {
   return (
     <div className=" bg-gray-200 text-gray-700">
-      <Header />
       <NavBar />
+      <Header />
       <Rooms />
       <Offerings />
       <Gallery />

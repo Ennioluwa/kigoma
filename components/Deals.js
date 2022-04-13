@@ -2,7 +2,10 @@ import React from 'react'
 
 const Deals = () => {
   return (
-    <div className="container mx-auto grid grid-cols-1 gap-20 p-5 sm:p-10 md:grid-cols-2">
+    <div
+      className="container mx-auto grid grid-cols-1 gap-20 p-5 sm:p-10 md:grid-cols-2"
+      id="contact"
+    >
       <div className=" col-span-1 mx-auto flex w-full max-w-xl flex-col gap-6 p-0">
         <h3 className=" mb-4 text-4xl font-semibold">Be in the know.</h3>
         <h6 className=" text-xs font-bold">

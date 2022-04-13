@@ -33,25 +33,27 @@
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import { Transition } from '@headlessui/react'
+import { FaGripLines, FaGripLinesVertical } from 'react-icons/fa'
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <div>
-      <nav className=" fixed top-0 left-0 right-0 z-10 w-full shadow-lg">
-        <div className="flex w-full items-center justify-between bg-gray-100 opacity-80">
+      <nav className=" fixed top-0 left-0 right-0 z-[50000] w-full shadow-lg">
+        <div className="flex w-full items-center justify-between bg-gray-100 ">
           <div className="flex h-20 w-full items-center">
             <div className="mx-10 flex w-full items-center justify-between ">
               <div className=" flex flex-shrink-0 items-center justify-center">
                 <h1 className=" cursor-pointer text-lg font-bold">
-                  Ko<span className=" text-blue-500">gama</span>
+                  Ki<span className=" text-blue-500">goma</span>
                 </h1>
               </div>
               <div className="hidden md:block">
                 <Link
-                  activeClass="rooms"
+                  activeClass="active"
                   to="rooms"
                   smooth={true}
+                  spy={true}
                   offset={50}
                   duration={500}
                   className=" cursor-pointer px-3 py-2 font-semibold text-blue-600 hover:font-black"
@@ -59,8 +61,8 @@ const Nav = () => {
                   Rooms
                 </Link>
                 <Link
-                  activeClass="about"
-                  to="about"
+                  activeClass="active"
+                  to="facilities"
                   smooth={true}
                   offset={50}
                   duration={500}
@@ -69,8 +71,8 @@ const Nav = () => {
                   Facilities
                 </Link>
                 <Link
-                  activeClass="work"
-                  to="work"
+                  activeClass="active"
+                  to="gallery"
                   smooth={true}
                   offset={50}
                   duration={500}
@@ -79,24 +81,24 @@ const Nav = () => {
                   Gallery
                 </Link>
                 <Link
-                  activeClass="services"
-                  to="services"
+                  activeClass="active"
+                  to="message"
                   smooth={true}
                   offset={50}
                   duration={500}
                   className=" cursor-pointer px-3 py-2 font-semibold text-blue-600 hover:font-black"
                 >
-                  Contact
+                  Message
                 </Link>
                 <Link
-                  activeClass="contact"
+                  activeClass="active"
                   to="contact"
                   smooth={true}
                   offset={50}
                   duration={500}
                   className=" cursor-pointer px-3 py-2 font-semibold text-blue-600 hover:font-black"
                 >
-                  About
+                  Contact Us
                 </Link>
               </div>
             </div>
@@ -108,37 +110,39 @@ const Nav = () => {
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              {!isOpen ? 'open' : 'close'}
+              {!isOpen ? <FaGripLines /> : <FaGripLinesVertical />}
             </button>
           </div>
         </div>
         <Transition
           show={isOpen}
-          enter="transition  ease-out duration-100 transform"
-          enterFrom="opacity-0 scale-95"
+          enter="transition  ease-out duration-200 transform"
+          enterFrom="opacity-0 scale-90"
           enterTo="opacity-100 scale-100"
-          leave="transition  ease-in duration-75 transform"
-          leaveFrom="opacity-0 scale-95"
+          leave="transition  ease-in duration-400 transform"
+          leaveFrom="opacity-0 scale-90"
           leaveTo="opacity-100 scale-100"
         >
           {(ref) => (
             <div className=" id=mobile-menu md:hidden">
               <div className="bg-white px-2 py-2">
                 <Link
-                  href="/home"
-                  activeClass="home"
-                  to="home"
+                  href="#rooms"
+                  activeClass="active"
+                  to="rooms"
                   smooth={true}
                   offset={50}
+                  onClick={() => setIsOpen(false)}
                   duration={500}
                   className="block cursor-pointer rounded-md py-2 px-3 text-base font-medium text-black hover:bg-blue-600 hover:text-white"
                 >
                   Rooms
                 </Link>
                 <Link
-                  href="/home"
-                  activeClass="home"
-                  to="home"
+                  href="/facilities"
+                  activeClass="active"
+                  to="facilities"
+                  onClick={() => setIsOpen(false)}
                   smooth={true}
                   offset={50}
                   duration={500}
@@ -147,9 +151,10 @@ const Nav = () => {
                   Facilities
                 </Link>
                 <Link
-                  href="/home"
-                  activeClass="home"
-                  to="home"
+                  href="/gallery"
+                  activeClass="active"
+                  to="gallery"
+                  onClick={() => setIsOpen(false)}
                   smooth={true}
                   offset={50}
                   duration={500}
@@ -158,26 +163,28 @@ const Nav = () => {
                   Gallery
                 </Link>
                 <Link
-                  href="/home"
-                  activeClass="home"
-                  to="home"
+                  href="/message"
+                  activeClass="active"
+                  to="message"
+                  onClick={() => setIsOpen(false)}
                   smooth={true}
                   offset={50}
                   duration={500}
                   className="block cursor-pointer rounded-md py-2 px-3 text-base font-medium text-black hover:bg-blue-600 hover:text-white"
                 >
-                  Contact
+                  Message
                 </Link>
                 <Link
-                  href="/home"
-                  activeClass="home"
-                  to="home"
+                  href="/contact"
+                  activeClass="active"
+                  onClick={() => setIsOpen(false)}
+                  to="contact"
                   smooth={true}
                   offset={50}
                   duration={500}
                   className="block cursor-pointer rounded-md py-2 px-3 text-base font-medium text-black hover:bg-blue-600 hover:text-white"
                 >
-                  About
+                  Contact Us
                 </Link>
               </div>
             </div>

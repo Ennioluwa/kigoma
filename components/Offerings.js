@@ -3,7 +3,10 @@ import Card from './Card'
 
 const Offerings = () => {
   return (
-    <div className=" container mx-auto max-w-screen-2xl p-5 sm:p-10 lg:p-20">
+    <div
+      className=" container mx-auto max-w-screen-2xl p-5 sm:p-10 lg:p-20"
+      id="facilities"
+    >
       <h3 className=" col-span-1 mb-20 text-4xl font-semibold md:col-span-3">
         Our popular offerings
       </h3>
